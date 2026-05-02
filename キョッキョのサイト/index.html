@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>きょっきょの日本めぐり日記</title>
+    <meta
+      name="description"
+      content="ぬいぐるみのきょっきょが、日本各地を旅しながら見つけた景色や食べものを綴る日記サイト。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <main class="browser-frame" id="top">
+      <div class="browser-bar" aria-hidden="true">
+        <span class="window-dot red"></span>
+        <span class="window-dot yellow"></span>
+        <span class="window-dot green"></span>
+        <div class="browser-arrow">‹</div>
+        <div class="browser-arrow">›</div>
+        <div class="address">kitsune-nippon.local</div>
+        <div class="browser-control"></div>
+        <div class="browser-control"></div>
+      </div>
+
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="きょっきょの日本めぐり日記 ホーム">
+          <span class="brand-mark">
+            <img src="assets/images/fox-original.jpg" alt="" />
+          </span>
+          <span class="brand-text">きょっきょの<span>日本</span>めぐり日記</span>
+        </a>
+
+        <nav class="main-nav" aria-label="メインナビゲーション">
+          <a href="#top" class="active">ホーム</a>
+          <a href="#map">旅先一覧</a>
+          <a href="#diary">日記</a>
+          <a href="#gallery">写真</a>
+          <a href="#profile">プロフィール</a>
+        </nav>
+
+        <div class="socials" aria-label="SNSリンク">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="4" width="16" height="16" rx="5"></rect>
+              <circle cx="12" cy="12" r="3.2"></circle>
+              <circle cx="17.1" cy="6.9" r="1"></circle>
+            </svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 5l14 14M19 5L5 19"></path>
+            </svg>
+          </a>
+          <a href="mailto:hello@example.com" aria-label="メール">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.5 6.5h15v11h-15z"></path>
+              <path d="M5 7l7 6 7-6"></path>
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <section class="hero" aria-label="メインビジュアル">
+        <div class="hero-image-wrap">
+          <img
+            class="hero-image active"
+            src="assets/images/hero-fuji.png"
+            alt="富士山と桜を背景に手を振るぬいぐるみのきょっきょ"
+            data-slide="0"
+          />
+          <img
+            class="hero-image"
+            src="assets/images/diary-hokkaido.png"
+            alt="雪の小樽運河で手を振るぬいぐるみのきょっきょ"
+            data-slide="1"
+          />
+          <img
+            class="hero-image"
+            src="assets/images/diary-okinawa.png"
+            alt="沖縄の海辺で貝殻を持つぬいぐるみのきょっきょ"
+            data-slide="2"
+          />
+        </div>
+        <div class="hero-vignette" aria-hidden="true"></div>
+        <div class="postmark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="paw-icon"></span>
+            きょっきょと一緒に、いろんな景色に出会おう
+          </p>
+          <h1>ぬいぐるみのきょっきょと<br />日本を旅する日記サイト</h1>
+          <p class="lead">
+            小さなぬいぐるみのきょっきょが、日本全国をめぐりながら見たこと・食べたもの・出会った人を日記にしています。
+          </p>
+          <a class="primary-action" href="#diary">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 5.5c3.2 0 5.4.8 7 2.2 1.6-1.4 3.8-2.2 7-2.2v12.8c-3.2 0-5.4.7-7 2.1-1.6-1.4-3.8-2.1-7-2.1z"></path>
+              <path d="M12 7.7v12.7"></path>
+            </svg>
+            最新の日記を読む
+          </a>
+        </div>
+        <div class="travel-dots" aria-label="メイン写真の切り替え">
+          <button class="active" type="button" data-target="0" aria-label="富士山の写真"></button>
+          <button type="button" data-target="1" aria-label="北海道の写真"></button>
+          <button type="button" data-target="2" aria-label="沖縄の写真"></button>
+        </div>
+      </section>
+
+      <section class="map-section" id="map">
+        <div class="section-intro">
+          <p class="section-kicker">きょっきょの旅マップ</p>
+          <h2>次はどこに行こうかな?</h2>
+          <p>これまで訪れた場所を、足あとと小さなメモでまとめました。</p>
+          <p class="map-note" id="mapNote">ピンを選ぶと、その土地のひとことメモが変わります。</p>
+        </div>
+
+        <div class="japan-map" aria-label="日本各地の旅行先">
+          <svg class="map-art" viewBox="0 0 980 440" role="img" aria-label="日本をめぐる旅マップ">
+            <defs>
+              <filter id="paperShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#7a4d2c" flood-opacity=".12" />
+              </filter>
+            </defs>
+            <path class="sea-line line-a" d="M64 98c30 20 54 20 83 0 28-20 55-20 83 0" />
+            <path class="sea-line line-b" d="M740 170c31 20 55 20 84 0 28-20 55-20 83 0" />
+            <path class="sea-line line-c" d="M690 330c28 18 51 18 77 0 27-18 53-18 80 0" />
+            <g class="islands" filter="url(#paperShadow)">
+              <path d="M665 40c58-12 119 8 151 45 15 17 13 32-5 44-36 24-100 19-152-10-37-20-54-58 6-79z" />
+              <path d="M596 132c31 22 57 53 63 93 9 60-18 115-64 151-31 25-70 36-102 16-27-17-23-46 3-71 33-33 42-74 31-111-9-31 11-74 69-78z" />
+              <path d="M459 278c37 6 48 32 31 53-30 37-98 42-159 64-31 11-59 5-69-14-9-19 3-39 31-48 54-18 97-58 166-55z" />
+              <path d="M252 324c-12 34-53 57-90 46-28-8-34-30-15-48 28-26 80-28 105 2z" />
+              <path d="M835 338c38-9 66 9 63 35-4 30-48 47-84 34-32-11-21-58 21-69z" />
+            </g>
+            <path class="route" d="M751 87C687 119 633 162 610 213 582 276 522 319 446 326 372 333 321 357 249 346 214 341 185 345 164 358" />
+            <path class="route route-two" d="M598 209C665 212 720 200 789 184" />
+          </svg>
+
+          <button class="map-pin hokkaido active" type="button" data-note="雪の小樽運河で、ほっぺまで冷たい朝。">北海道<span>雪と運河にほっこり</span></button>
+          <button class="map-pin tokyo" type="button" data-note="東京タワーの下で、都会の風をくんくん。">東京<span>にぎやかな街をおさんぽ</span></button>
+          <button class="map-pin kyoto" type="button" data-note="京都の木の香りと、抹茶ソフトでひと休み。">京都<span>古都の景色にうっとり</span></button>
+          <button class="map-pin osaka" type="button" data-note="大阪では、たこ焼きの湯気にまっすぐ寄り道。">大阪<span>たこ焼きだいすき!</span></button>
+          <button class="map-pin hiroshima" type="button" data-note="広島の公園で、静かな夕方を大切に歩いたよ。">広島<span>平和の大切さを感じて</span></button>
+          <button class="map-pin okinawa" type="button" data-note="沖縄の海は、キラキラしすぎてしばらく無言。">沖縄<span>海がきれいっ!</span></button>
+        </div>
+      </section>
+
+      <section class="diary-section" id="diary">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">最新の日記</p>
+            <h2>きょっきょの旅ノート</h2>
+          </div>
+          <div class="filter-tabs" aria-label="日記の絞り込み">
+            <button class="active" type="button" data-filter="all">すべて</button>
+            <button type="button" data-filter="spring">景色</button>
+            <button type="button" data-filter="food">食べもの</button>
+            <button type="button" data-filter="sea">海</button>
+          </div>
+        </div>
+
+        <div class="diary-grid">
+          <a class="diary-card" href="diary/hokkaido.html" data-category="spring" aria-label="北海道の記事ページへ">
+            <img src="assets/images/diary-hokkaido.png" alt="雪の小樽運河で手を振るぬいぐるみのきょっきょ" />
+            <div class="card-body">
+              <div class="meta"><span>北海道</span><time datetime="2026-05-12">2026.05.12</time></div>
+              <h3>雪の小樽で運河さんぽ</h3>
+              <p>しんしん雪の朝。石造りの倉庫が水面に映って、きょっきょの足あとも少しだけ白くなりました。</p>
+            </div>
+          </a>
+
+          <a class="diary-card" href="diary/tokyo.html" data-category="spring" aria-label="東京の記事ページへ">
+            <img src="assets/images/diary-tokyo.png" alt="東京タワーを背景に手を振るぬいぐるみのきょっきょ" />
+            <div class="card-body">
+              <div class="meta"><span>東京</span><time datetime="2026-05-01">2026.05.01</time></div>
+              <h3>東京タワーと下町めぐり</h3>
+              <p>赤い塔を見上げてから、公園のベンチでひと休み。都会の風もなかなかいいね。</p>
+            </div>
+          </a>
+
+          <a class="diary-card" href="diary/kyoto.html" data-category="food spring" aria-label="京都の記事ページへ">
+            <img src="assets/images/diary-kyoto.png" alt="京都の寺院で抹茶ソフトを持つぬいぐるみのきょっきょ" />
+            <div class="card-body">
+              <div class="meta"><span>京都</span><time datetime="2026-04-20">2026.04.20</time></div>
+              <h3>清水寺からの絶景</h3>
+              <p>舞台からの景色に感動。おみくじは「大吉」だったよ、やったー!</p>
+            </div>
+          </a>
+
+          <a class="diary-card" href="diary/osaka.html" data-category="food" aria-label="大阪の記事ページへ">
+            <img src="assets/images/diary-osaka.png" alt="大阪の街でたこ焼きを前にしたぬいぐるみのきょっきょ" />
+            <div class="card-body">
+              <div class="meta"><span>大阪</span><time datetime="2026-04-10">2026.04.10</time></div>
+              <h3>たこ焼きにソース二度づけ?</h3>
+              <p>湯気に誘われて寄り道。あつあつをふうふうして、旅のページが香ばしくなりました。</p>
+            </div>
+          </a>
+
+          <a class="diary-card" href="diary/hiroshima.html" data-category="spring" aria-label="広島の記事ページへ">
+            <img src="assets/images/diary-hiroshima.png" alt="広島平和記念公園で座るぬいぐるみのきょっきょ" />
+            <div class="card-body">
+              <div class="meta"><span>広島</span><time datetime="2026-03-28">2026.03.28</time></div>
+              <h3>平和記念公園を訪れて</h3>
+              <p>いつもよりゆっくり歩いた一日。静かな芝生と夕方の光を、日記に大切にしまいました。</p>
+            </div>
+          </a>
+
+          <a class="diary-card" href="diary/okinawa.html" data-category="sea" aria-label="沖縄の記事ページへ">
+            <img src="assets/images/diary-okinawa.png" alt="沖縄の海辺で貝殻を持つぬいぐるみのきょっきょ" />
+            <div class="card-body">
+              <div class="meta"><span>沖縄</span><time datetime="2026-03-15">2026.03.15</time></div>
+              <h3>エメラルドブルーの海!</h3>
+              <p>砂浜で貝がらを拾って、シーサーにも会えたよ。海風がぬいぐるみにもやさしい。</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="gallery">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">きょっきょの旅フォトギャラリー</p>
+            <h2>ポラロイドの思い出</h2>
+          </div>
+          <button class="round-next" type="button" aria-label="次の写真を見る">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="photo-rail">
+          <button class="polaroid tilt-left" type="button" data-full="assets/images/hero-fuji.png" data-caption="富士山と桜、春のはじまり">
+            <img src="assets/images/hero-fuji.png" alt="富士山と桜を背景にしたぬいぐるみのきょっきょ" />
+            <span>富士山と桜</span>
+          </button>
+          <button class="polaroid tilt-right" type="button" data-full="assets/images/diary-kyoto.png" data-caption="京都で抹茶ソフト休憩">
+            <img src="assets/images/diary-kyoto.png" alt="京都で抹茶ソフトを持つぬいぐるみのきょっきょ" />
+            <span>京都で休憩</span>
+          </button>
+          <button class="polaroid tilt-left" type="button" data-full="assets/images/diary-osaka.png" data-caption="大阪のたこ焼き、香りまで思い出">
+            <img src="assets/images/diary-osaka.png" alt="大阪のたこ焼きとぬいぐるみのきょっきょ" />
+            <span>たこ焼き時間</span>
+          </button>
+          <button class="polaroid tilt-right" type="button" data-full="assets/images/diary-hokkaido.png" data-caption="雪の小樽運河で朝さんぽ">
+            <img src="assets/images/diary-hokkaido.png" alt="雪の小樽運河のぬいぐるみのきょっきょ" />
+            <span>小樽の朝</span>
+          </button>
+          <button class="polaroid tilt-left" type="button" data-full="assets/images/diary-okinawa.png" data-caption="沖縄の青い海と貝殻">
+            <img src="assets/images/diary-okinawa.png" alt="沖縄の海辺のぬいぐるみのきょっきょ" />
+            <span>沖縄の海</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="profile-section" id="profile">
+        <div class="profile-photo">
+          <img src="assets/images/fox-original.jpg" alt="参考写真のぬいぐるみのきょっきょ" />
+          <div class="speech">はじめまして!<br />旅がだいすきな、きょっきょです。</div>
+        </div>
+
+        <div class="profile-card">
+          <p class="section-kicker">きょっきょのプロフィール</p>
+          <dl>
+            <div>
+              <dt>名前</dt>
+              <dd>きょっきょ</dd>
+            </div>
+            <div>
+              <dt>誕生日</dt>
+              <dd>9月9日</dd>
+            </div>
+            <div>
+              <dt>性格</dt>
+              <dd>好奇心旺盛・ちょっぴりマイペース</dd>
+            </div>
+            <div>
+              <dt>好きなもの</dt>
+              <dd>たこ焼き、温泉、古い駅、写真を撮ること</dd>
+            </div>
+            <div>
+              <dt>目標</dt>
+              <dd>日本全国を旅して、たくさんの思い出をつくること</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="memo">
+          <p>ひとことメモ</p>
+          <ul>
+            <li>まだ見ぬ景色をやさしいものへ。</li>
+            <li>すてきな人たちとの出会いが楽しみ。</li>
+            <li>これからも、よろしくね!</li>
+          </ul>
+          <svg viewBox="0 0 110 80" aria-hidden="true">
+            <path d="M21 45c10-25 55-25 67 0 7 17-10 28-33 28S14 62 21 45z"></path>
+            <path d="M30 38L24 13l22 15M80 38l6-25-22 15M39 50h.1M70 50h.1M49 58c4 3 8 3 12 0"></path>
+          </svg>
+        </aside>
+      </section>
+
+      <footer class="site-footer">
+        <a class="brand footer-brand" href="#top">
+          <span class="brand-mark">
+            <img src="assets/images/fox-original.jpg" alt="" />
+          </span>
+          <span class="brand-text">きょっきょの<span>日本</span>めぐり日記</span>
+        </a>
+        <p>ぬいぐるみのきょっきょと日本を旅する日記サイト</p>
+        <div class="footer-links">
+          <a href="#map">旅先一覧</a>
+          <a href="#diary">日記</a>
+          <a href="#gallery">写真</a>
+          <a href="#profile">プロフィール</a>
+        </div>
+      </footer>
+    </main>
+
+    <dialog class="lightbox" aria-label="写真プレビュー">
+      <button class="lightbox-close" type="button" aria-label="閉じる">×</button>
+      <img src="assets/images/hero-fuji.png" alt="" />
+      <p></p>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
